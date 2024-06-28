@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-ar">
+<head>
+    <title>BM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/styles22.css" rel="stylesheet">
+    <style>
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <nav>
+        <p class="nav-p">Blue Market</p>
+        <button class="button1" onclick="showSignUp()">Sign Up</button>
+        <button class="button2" onclick="showLogin()">Log In</button>
+    </nav>
+    <div class="container">
+        <div class="left">
+            <h1>Welcome to <br>the Blue Market</h1>
+            <p>this is where we meet, choose, sell and buy all kind of things <br> please log in to your account if you already have one or sign up if you don't or you can easily visit our website as a guest</p>
+            <button class="visit-btn" onclick="visitAsGuest()">Visit as a Guest</button>
+        </div>
+        <div class="right">
+            <img src="image/_b711def7-f357-4078-b253-da9862828abd.jpg" alt="a photo for people exchanging their materials">
+        </div>
+    </div>
+
+    <div id="loginForm" class="hidden">
+        <h2>Log In</h2>
+        <form style="max-width: 500px;">
+            <fieldset>
+            <label for="username">Username: <input type="text" id="username" name="username" required></label>
+            
+            <label for="password">Password: <input type="password" id="password" name="password" pattern="[a-z0-9]{8,}" required></label>
+            
+            <button type="submit">Log In</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <div id="signUpForm" class="hidden">
+        <h3 >Registration Form</h3>
+        <p style="text-align: center; margin-bottom: 0px;">Please fill out this form with the required information</p>
+        <form method="post" >
+            <div class="form-fields">
+          <fieldset>
+            <label for="first-name">Enter Your First Name:<input id="first-name" name="first-name" type="text" required /></label>
+            <label for="last-name">Enter Your Last Name: <input id="last-name" name="last-name" type="text" required /></label>
+            <label for="email">Enter Your Email: <input id="email" name="email" type="email" required /></label>
+            <label for="new-password">Create a New Password: <input id="new-password" name="new-password" type="password" pattern="[a-z0-9]{8,}" required /></label>
+          </fieldset>
+          <fieldset>
+            <label for="profile-picture">Upload a profile picture: <input id="profile-picture" type="file" name="file" /></label>
+            <label for="age">Input your age (years): <input id="age" type="number" name="age" min="13" max="120" /></label>
+            <label for="bio">Provide a bio:
+              <textarea id="bio" name="bio" rows="3" cols="40" placeholder="I like coding on the beach..."></textarea>
+            </label>
+          </fieldset>
+         </div>
+          <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <div id="guestPage" class="hidden">
+        <h2>Welcome, Guest!</h2>
+        <p>You are visiting as a guest. You have no permissions to change anything.</p>
+    </div>
+
+    <script src="js/scripts22.js"></script>
+</body>
+</html>

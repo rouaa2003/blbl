@@ -1,0 +1,78 @@
+<!-- chat-list.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <h1 class="nav-p">Blue Market</h1>
+        <button class="nav-button" onclick="window.location.href='index.html'"><i class="fas fa-home"></i></button>
+        <button class="nav-button"><i class="fas fa-filter"></i></button>
+        <div class="nav-search">
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+        <button class="nav-button" id="chat-button"><i class="fas fa-comments"></i></button>
+        <button class="nav-button"><i class="fas fa-info-circle"></i></button>
+    </nav>
+    <main>
+        <div class="chat-list">
+            <h2>Chats</h2>
+            <ul id="chat-list">
+                <!-- Chat items will be dynamically inserted here -->
+                <li class="chat-item" onclick="window.location.href='chat.html?chatId=1'">Chat with Seller 1</li>
+                <li class="chat-item" onclick="window.location.href='chat.html?chatId=2'">Chat with Seller 2</li>
+                <li class="chat-item" onclick="window.location.href='chat.html?chatId=3'">Chat with Seller 3</li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Blue Market. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+<!-- chat.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <h1 class="nav-p">Blue Market</h1>
+        <button class="nav-button" onclick="window.location.href='index.html'"><i class="fas fa-home"></i></button>
+        <button class="nav-button"><i class="fas fa-filter"></i></button>
+        <div class="nav-search">
+            <input type="text" placeholder="Search...">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </div>
+        <button class="nav-button" id="chat-button"><i class="fas fa-comments"></i></button>
+        <button class="nav-button"><i class="fas fa-info-circle"></i></button>
+    </nav>
+    <main>
+        <div class="chat-container">
+            <div id="chat-box">
+                <!-- Chat messages will be dynamically inserted here -->
+            </div>
+            <div class="message-input">
+                <input type="text" id="message-input" placeholder="Type your message...">
+                <button id="send-button"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Blue Market. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
+

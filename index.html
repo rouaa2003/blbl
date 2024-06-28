@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blue Market</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+</head>
+
+<body>
+  <nav>
+    <h1 class="nav-p">Blue Market</h1>
+    <button class="nav-button"><i class="fas fa-home"></i></button>
+    <button class="nav-button"><i class="fas fa-filter"></i></button>
+    <div class="nav-search">
+      <input type="text" placeholder="Search...">
+      <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
+    <button id="add-product-button" class="add-product-button"><i class="fas fa-plus"></i></button>
+    <button id="profileButton" class="nav-button"><i class="fas fa-user-circle"></i></button>
+    <button class="nav-button chat-icon" id="chat-toggle"><i class="fas fa-comments"></i></button>
+  </nav>
+  <header>
+    <h1>Welcome to the Blue Market</h1>
+    <p>Buy and sell used products easily</p>
+  </header>
+  <main>
+    <div class="product-grid" id="product-grid">
+
+      <!-- Product cards will be dynamically inserted here -->
+      <div class="product-card" data-seller="John Doe">
+        <img src="image1.jpg" alt="Product 1" />
+        <div class="product-details">
+          <h3>Product 1</h3>
+          <p>Condition: New</p>
+          <p>Status: Available</p>
+          <p>City: Damascus</p>
+          <p>Categories: Clothes, Electronics</p>
+          <button class="chat-button">Chat with Seller</button>
+          <button class="sell-button">Mark as Sold</button>
+        </div>
+      </div>
+      <!-- Repeat product-card as needed -->
+
+      <div class="product-card" data-seller="John Doe">
+        <img src="image1.jpg" alt="Product 1" />
+        <div class="product-details">
+          <h3>Product 1</h3>
+          <p>Condition: New</p>
+          <p>Status: Available</p>
+          <p>City: Damascus</p>
+          <p>Categories: Clothes, Electronics</p>
+          <button class="chat-button">Chat with Seller</button>
+          <button class="sell-button">Mark as Sold</button>
+        </div>
+      </div>
+      <div class="product-card" data-seller="John Doe">
+        <img src="image1.jpg" alt="Product 1" />
+        <div class="product-details">
+          <h3>Product 1</h3>
+          <p>Condition: New</p>
+          <p>Status: Available</p>
+          <p>City: Damascus</p>
+          <p>Categories: Clothes, Electronics</p>
+          <button class="chat-button">Chat with Seller</button>
+          <button class="sell-button">Mark as Sold</button>
+        </div>
+      </div>
+      <div class="product-card" data-seller="John Doe">
+        <img src="image1.jpg" alt="Product 1" />
+        <div class="product-details">
+          <h3>Product 1</h3>
+          <p>Condition: New</p>
+          <p>Status: Available</p>
+          <p>City: Damascus</p>
+          <p>Categories: Clothes, Electronics</p>
+          <button class="chat-button">Chat with Seller</button>
+          <button class="sell-button">Mark as Sold</button>
+        </div>
+      </div>
+      <div class="product-card" data-seller="John Doe">
+        <img src="image1.jpg" alt="Product 1" />
+        <div class="product-details">
+          <h3>Product 1</h3>
+          <p>Condition: New</p>
+          <p>Status: Available</p>
+          <p>City: Damascus</p>
+          <p>Categories: Clothes, Electronics</p>
+          <button class="chat-button">Chat with Seller</button>
+          <button class="sell-button">Mark as Sold</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 Blue Market. All rights reserved.</p>
+  </footer>
+  <div id="add-product-form-container" class="add-product-form-container">
+    <form id="add-product-form">
+      <h2>Add New Product</h2>
+      <label for="product-name">Product Name:</label>
+      <input type="text" id="product-name" name="product-name" required>
+      <label for="product-condition">Condition:</label>
+      <input type="text" id="product-condition" name="product-condition" required>
+      <label for="product-image">Image URL:</label>
+      <input type="text" id="product-image" name="product-image" required>
+      <label for="product-status">Status:</label>
+      <select id="product-status" name="product-status" required>
+        <option value="available">Available</option>
+        <option value="sold">Sold</option>
+      </select>
+      <label for="product-city">City:</label>
+      <select id="product-city" name="product-city" required>
+        <option value="Damascus">Damascus</option>
+        <option value="Aleppo">Aleppo</option>
+        <option value="Homs">Homs</option>
+        <option value="Latakia">Latakia</option>
+        <option value="Tartus">Tartus</option>
+      </select>
+      <button type="submit">Add Product</button>
+      <button type="button" id="cancel-button">Cancel</button>
+    </form>
+  </div>
+  <div id="profileModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Profile Details</h2>
+      <div class="profile-pic" id="profilePic">
+        <img src="ProfilePicture.jpg" id="profileImage">
+      </div>
+      <input type="file" id="fileInput" accept="image/*">
+      <p>Name: John Doe</p>
+      <p>Email: johndoe@example.com</p>
+      <p>Location: New York, USA</p>
+      <button id="add-product-button" class="add-product-button" style="position: relative;top:150px;left:265px;  font-size: 100%;width: 15%;
+              height: 10%;"><i class="fas fa-plus"></i></button>
+      <div class="actions">
+        <button class="edit-profile-btn"><i class="fas fa-edit"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="edit-modal">
+    <div class="edit-modal-content">
+      <form id="profile-form">
+        <input type="text" id="name-input" placeholder=" Enter New Name">
+        <input type="email" id="email-input" placeholder="Enter New Email">
+        <input type="password" id="password-input" placeholder="Enter Old Password">
+        <input type="password" id="password-input" placeholder="Enter New Password">
+        <input type="text" id="location-input" placeholder="Enter New Location">
+
+        <button type="submit" class="save-profile-btn">Save Changes</button>
+      </form>
+    </div>
+  </div>
+  <div id="chat-container" class="chat-container">
+    <div class="chat-list" id="chat-list">
+      <h2>Chats</h2>
+      <div class="chat-item" data-chat-id="chat1" onclick="showChatContent('chat1')">Chat 1</div>
+      <div class="chat-item" data-chat-id="chat2" onclick="showChatContent('chat2')">Chat 2</div>
+      <div class="chat-item" data-chat-id="chat3" onclick="showChatContent('chat3')">Chat 3</div>
+    </div>
+    <div id="chat-content" class="chat-content hidden">
+      <h2>Chat Details</h2>
+      <div class="messages">
+        <!-- Messages will be displayed here -->
+      </div>
+      <div class="new-message">
+        <input type="text" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+      </div>
+      <button class="exit-chat-button" onclick="hideChatContent()">Exit Chat</button>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
